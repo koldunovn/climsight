@@ -637,6 +637,16 @@ st.title(
 
 # Define map and handle map clicks
 m = folium.Map(location=[lat_default, lon_default], zoom_start=13)
+basemaps = {
+    'Google Maps': folium.TileLayer(
+        tiles = 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+        attr = 'Google',
+        name = 'Google Maps',
+        overlay = True,
+        control = True
+    )}
+basemaps['Google Maps'].add_to(m)
+
 with st.sidebar:
     map_data = st_folium(m)
 if map_data:
