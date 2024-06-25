@@ -18,6 +18,8 @@ dependencies:
     - netcdf4
     - dask
     - pip
+    - langchain-community 
+    - osmnx
     - matplotlib
     - pip:
         - openai==1.5.0
